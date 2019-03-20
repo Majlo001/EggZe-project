@@ -4,14 +4,14 @@ package com.example.quizzappproject;
 
 public class Questions {
     public String mQuestions [] = {
-            "Ile planet ma Układ Słoneczny?"
-            "Jaka jest druga najbliższa Ziemi gwiazda?"
-            "Jak nazywa się pierwszy obiekt, który został umieszczony na orbicie Ziemi?"
-            "Kto jako pierwszy wysłał człowieka w kosmos?"
-            "Jak nazywała się misja pierwszego kosmicznego lotu załogowego?"
-            "Teoria inflacji zakłada, że wszechświat powstał..?"
-            "Eksperyment BOOMERanG przeprowadzony w latach 1998 i 2003 udowodnił, że Wszechświat jest..?"
-            "Która gwiazda (nie uwzględniając Słońca) jest najjaśniejsza według jasności widomej?"
+            "Ile planet ma Układ Słoneczny?",
+            "Jaka jest druga najbliższa Ziemi gwiazda?",
+            "Jak nazywa się pierwszy obiekt, który został umieszczony na orbicie Ziemi?",
+            "Kto jako pierwszy wysłał człowieka w kosmos?",
+            "Jak nazywała się misja pierwszego kosmicznego lotu załogowego?",
+            "Teoria inflacji zakłada, że wszechświat powstał..?",
+            "Eksperyment BOOMERanG przeprowadzony w latach 1998 i 2003 udowodnił, że Wszechświat jest..?",
+            "Która gwiazda (nie uwzględniając Słońca) jest najjaśniejsza według jasności widomej?",
             "Einstein urodził się w dzień liczby Pi (14 Marca), a który wielki uczony zmarł w tym dniu?"
 
     };
@@ -29,6 +29,35 @@ public class Questions {
 
     };
 
-    public String mCorrectAnswer [] = {"8","Proxima Centauri","Sputnik 1","ZSRR","Wostok 1","z fałszywej próżni","płaski","Syriusz","Stephen Hawking"}
+    public String mCorrectAnswers [] = {"8","Proxima Centauri","Sputnik 1","ZSRR","Wostok 1","z fałszywej próżni","płaski","Syriusz","Stephen Hawking"};
 
+    public String getQuestion(int a){
+        String question = mQuestions[a];
+        return question;
+    }
+
+    public String getChoice1(int a){
+        String choice = mChoices[a][0];
+        return choice ;
+    }
+
+    public String getChoice2(int a){
+        String choice = mChoices[a][1];
+        return choice ;
+    }
+
+    public String getChoice3(int a){
+        String choice = mChoices[a][2];
+        return choice ;
+    }
+
+    public String getChoice4(int a){
+        String choice = mChoices[a][3];
+        return choice ;
+    }
+
+    public String getCorrectAnswers(int a){
+        String answer = mCorrectAnswers[a];
+        return answer;
+    }
 }
