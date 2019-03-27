@@ -1,6 +1,7 @@
 package com.example.quizzappproject;
 
-   /*===== Made by Majlo on 11.03.2019 =====*/
+    /*====== Made by Majlo on 11.03.2019 ======*/
+    /*===== Edited by Majlo on 18.03.2019 =====*/
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar (toolbar);
+
+        //Intent intent = getIntent();
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

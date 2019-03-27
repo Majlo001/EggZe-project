@@ -1,6 +1,7 @@
 package com.example.quizzappproject;
 
-/*===== Made by Majlo on 11.03.2019 =====*/
+    /*====== Made by Majlo on 11.03.2019 ======*/
+    /*===== Edited by Majlo on 18.03.2019 =====*/
 
 public class Questions {
     public String mQuestions [] = {
