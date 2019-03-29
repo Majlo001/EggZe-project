@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     wynik.setText("Wynik: " + mWynik);
                     updateQuestions(r.nextInt(mQuestionLenght));
                 } else {
-                    gameOver();
+                    updateQuestions(r.nextInt(mQuestionLenght));
                 }
             }
         });
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     wynik.setText("Wynik: " + mWynik);
                     updateQuestions(r.nextInt(mQuestionLenght));
                 } else {
-                    gameOver();
+                    updateQuestions(r.nextInt(mQuestionLenght));
                 }
             }
         });
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                     wynik.setText("Wynik: " + mWynik);
                     updateQuestions(r.nextInt(mQuestionLenght));
                 } else {
-                    gameOver();
+                    updateQuestions(r.nextInt(mQuestionLenght));
                 }
             }
         });
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                     wynik.setText("Wynik: " + mWynik);
                     updateQuestions(r.nextInt(mQuestionLenght));
                 } else {
-                    gameOver();
+                    updateQuestions(r.nextInt(mQuestionLenght));
                 }
             }
         });
