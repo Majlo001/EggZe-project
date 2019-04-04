@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/expresso_gradient"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -10,10 +11,9 @@
 
     <Button
         android:id="@+id/answer1"
-        android:layout_width="393dp"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="80dp"
         android:layout_marginStart="9dp"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="9dp"
         android:layout_marginBottom="33dp"
         android:text="Button"
@@ -24,12 +24,10 @@
 
     <Button
         android:id="@+id/answer2"
-        android:layout_width="393dp"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="80dp"
         android:layout_marginStart="9dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="9dp"
-        android:layout_marginBottom="8dp"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/answer3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,12 +36,11 @@
 
     <Button
         android:id="@+id/answer3"
-        android:layout_width="393dp"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:height="80dp"
+        android:layout_height="80dp"
         android:layout_marginStart="9dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="9dp"
-        android:layout_marginBottom="8dp"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/answer4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,12 +49,11 @@
 
     <Button
         android:id="@+id/answer4"
-        android:layout_width="393dp"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:height="80dp"
+        android:layout_height="80dp"
         android:layout_marginStart="9dp"
-        android:layout_marginTop="9dp"
         android:layout_marginEnd="9dp"
-        android:layout_marginBottom="8dp"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/answer1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,19 +74,20 @@
         app:layout_constraintBottom_toTopOf="@+id/question"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <TextView
         android:id="@+id/question"
-        android:layout_width="389dp"
-        android:layout_height="305dp"
+        android:layout_width="370dp"
+        android:layout_height="250dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
         android:text="textView"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wynik" />
 

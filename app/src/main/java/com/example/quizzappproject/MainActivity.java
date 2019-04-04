@@ -6,8 +6,6 @@ package com.example.quizzappproject;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -29,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String mAnswer;
     private int mWynik = 0;
+    private int ile = 0;
     private int mQuestionLenght = mQuestions.mQuestions.length;
 
     Random r;
@@ -37,20 +36,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar (toolbar);
-
-        //Intent intent = getIntent();
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-
-            }
-        });
 
         r = new Random();
 
@@ -71,10 +56,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 if(answer1.getText() == mAnswer){
                     mWynik++;
+                    ile++;
+                    if (ile == 6){
+                        gameOver();
+                    }
                     wynik.setText("Wynik: " + mWynik);
                     updateQuestions(r.nextInt(mQuestionLenght));
                 } else {
                     updateQuestions(r.nextInt(mQuestionLenght));
+                    ile++;
+                    if (ile == 6){
+                        gameOver();
+                    }
                 }
             }
         });
@@ -84,10 +77,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 if(answer2.getText() == mAnswer){
                     mWynik++;
+                    ile++;
+                    if (ile == 6){
+                        gameOver();
+                    }
                     wynik.setText("Wynik: " + mWynik);
                     updateQuestions(r.nextInt(mQuestionLenght));
                 } else {
                     updateQuestions(r.nextInt(mQuestionLenght));
+                    ile++;
+                    if (ile == 6){
+                        gameOver();
+                    }
                 }
             }
         });
@@ -97,10 +98,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 if(answer3.getText() == mAnswer){
                     mWynik++;
+                    ile++;
+                    if (ile == 6){
+                        gameOver();
+                    }
                     wynik.setText("Wynik: " + mWynik);
                     updateQuestions(r.nextInt(mQuestionLenght));
                 } else {
                     updateQuestions(r.nextInt(mQuestionLenght));
+                    ile++;
+                    if (ile == 6){
+                        gameOver();
+                    }
                 }
             }
         });
@@ -110,10 +119,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 if(answer4.getText() == mAnswer){
                     mWynik++;
+                    ile++;
+                    if (ile == 6){
+                        gameOver();
+                    }
                     wynik.setText("Wynik: " + mWynik);
                     updateQuestions(r.nextInt(mQuestionLenght));
                 } else {
                     updateQuestions(r.nextInt(mQuestionLenght));
+                    ile++;
+                    if (ile == 6){
+                        gameOver();
+                    }
                 }
             }
         });
@@ -155,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
     private void gameOver() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
         final AlertDialog.Builder builder = alertDialogBuilder
-                .setMessage("Game Over! Twój wynik to: " + mWynik + " punkty.")
+                .setMessage("Gratulujemy! Twój wynik to: " + mWynik + " na 6 punktów.")
                 .setCancelable(false)
                 .setPositiveButton("Nowa Gra",
                         new DialogInterface.OnClickListener() {
