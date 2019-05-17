@@ -62,7 +62,7 @@
 
     <TextView
         android:id="@+id/wynik"
-        android:layout_width="382dp"
+        android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -70,10 +70,26 @@
         android:layout_marginBottom="8dp"
         android:gravity="center"
         android:text="texView"
+        android:textColor="#ffffff"
         android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/question"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/countdownText"
+        android:textColor="#ffffff"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="00:20"
+        android:textSize="24dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside" />
 
@@ -84,6 +100,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
+        android:textColor="#ffffff"
         android:text="textView"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
