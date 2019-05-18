@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".account"></activity>
+        <activity android:name=".Home"></activity>
+        <activity android:name=".RegisterActivity"></activity>
         <activity
             android:name=".Kategories"
             android:label="@string/title_activity_kategories"

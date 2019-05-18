@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btn_login;
     private TextView link_regist;
     private ProgressBar loading;
-    private static String URL_LOGIN="http://192.168.43.111/android_register_login/login.php";
+    private static String URL_LOGIN="http://192.168.0.176/android_register_login/login.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,12 +85,13 @@ public class LoginActivity extends AppCompatActivity {
 
                                     for (int i = 0; i < jsonArray.length(); i++) {
 
-                                        JSONObject object = jsonArray.getJSONObject(1);
+                                        JSONObject object = jsonArray.getJSONObject(i);
 
                                         String name = object.getString("name").trim();
                                         String email = object.getString("email").trim();
 
                                         Toast.makeText(LoginActivity.this, "Zalogowano pomyślnie! \nImie : " + name + "\nTwój email: " + email, Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(getApplicationContext(), Home.class));
                                     }
 
 
@@ -100,14 +101,14 @@ public class LoginActivity extends AppCompatActivity {
                                 e.printStackTrace();
                                 loading.setVisibility(View.VISIBLE);
                                 btn_login.setVisibility(View.GONE);
-                                Toast.makeText(LoginActivity.this, "Error " + e.toString(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Errorror " + e.toString(), Toast.LENGTH_LONG).show();
                             }
                         }
                     },
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(LoginActivity.this, "Error " + error.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Error" + error.toString(), Toast.LENGTH_SHORT).show();
                             loading.setVisibility(View.GONE);
                             btn_login.setVisibility(View.VISIBLE);
 

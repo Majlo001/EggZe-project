@@ -31,6 +31,7 @@ public class Home extends AppCompatActivity {
                     return true;
                 case R.id.navigation_notifications:
                     mTextMessage.setText("Ranking");
+                    startActivity(new Intent(getApplicationContext(), Kategories.class));
                     return true;
             }
             return false;
