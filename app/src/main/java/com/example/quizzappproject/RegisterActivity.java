@@ -70,8 +70,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                         if(success.equals("1")){
                             Toast.makeText(RegisterActivity.this, "Zarejestrowane pomyślnie!", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-                            startActivity(intent);
+                            startActivity(new Intent(getApplicationContext(), Home.class));
 
                         }
 
