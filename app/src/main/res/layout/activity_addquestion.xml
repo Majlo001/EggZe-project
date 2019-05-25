@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/expresso_gradient"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    tools:context=".AddQuestion">
+
+    <TextView
+        android:id="@+id/text"
+        android:text="Dodając nowe pytania pomagasz nam rozwijać aplikację."
+        android:layout_marginTop="150px"
+        android:textColor="@android:color/white"
+        android:textSize="50px"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layoutQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="70px"
+        android:layout_below="@+id/text">
+        <EditText
+            android:inputType="text"
+            android:hint="Tutaj wpisz pytanie"
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layoutAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="70px"
+        android:layout_below="@+id/layoutQuestion">
+        <EditText
+            android:inputType="text"
+            android:hint="Tutaj wpisz odpowiedź"
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layoutCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="70px"
+        android:layout_below="@+id/layoutAnswer">
+        <EditText
+            android:inputType="text"
+            android:hint="Tutaj wpisz kategorię pytania"
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_wer"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/layoutCategory"
+        android:backgroundTint="@color/design_default_color_primary_dark"
+        android:text="Prześlij do weryfikacji"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

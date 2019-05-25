@@ -101,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
                                 e.printStackTrace();
                                 loading.setVisibility(View.VISIBLE);
                                 btn_login.setVisibility(View.GONE);
-                                Toast.makeText(LoginActivity.this, "Errorror " + e.toString(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(LoginActivity.this, "Error" + e.toString(), Toast.LENGTH_LONG).show();
                             }
                         }
                     },

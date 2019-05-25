@@ -14,7 +14,7 @@ import android.content.Intent;
 
 public class Home extends AppCompatActivity {
 
-    private Button act, profil;
+    private Button act, profil, pytanie;
     private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -59,6 +59,14 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 startActivity(new Intent(getApplicationContext(), account.class));
+            }
+        });
+
+        pytanie = (Button) findViewById(R.id.pytanie);
+        profil.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(getApplicationContext(), AddQuestion.class));
             }
         });
 
