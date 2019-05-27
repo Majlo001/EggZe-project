@@ -1,5 +1,10 @@
 package com.example.quizzappproject;
 
+/**
+ * \author MΔJLO
+ * \version 1.3
+ */
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -63,7 +68,7 @@ public class Home extends AppCompatActivity {
         });
 
         pytanie = (Button) findViewById(R.id.pytanie);
-        profil.setOnClickListener(new View.OnClickListener(){
+        pytanie.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 startActivity(new Intent(getApplicationContext(), AddQuestion.class));
