@@ -1,11 +1,13 @@
 package com.example.quizzappproject;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class account extends AppCompatActivity {
 
@@ -31,6 +33,13 @@ public class account extends AppCompatActivity {
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("remember","false");
+                editor.apply();
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                Toast.makeText(account.this, "Wylogowano", Toast.LENGTH_SHORT).show();
+
                 finish();
             }
         });

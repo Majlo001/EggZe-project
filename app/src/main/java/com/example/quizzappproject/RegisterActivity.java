@@ -29,7 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText name, email, password, c_password;
     private Button btn_regist;
     private ProgressBar loading;
-    private static String URL_Regist="http://192.168.0.176/android_register_login/register.php";
+    private static String URL_Regist="http://192.168.0.112/android_register_login/register.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

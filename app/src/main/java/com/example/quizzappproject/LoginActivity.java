@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView link_regist;
     private ProgressBar loading;
     private CheckBox remember;
-    private static String URL_LOGIN="http://192.168.0.176/android_register_login/login.php";
+    private static String URL_LOGIN="http://192.168.0.112/android_register_login/login.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +52,9 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
         String checkbox = preferences.getString("remember","");
         if(checkbox.equals("true")){
-
-        }else if(checkbox.equals("false")){
-
+            startActivity(new Intent(getApplicationContext(), Home.class));
+        }else if(checkbox.equals("false")) {
+            Toast.makeText(LoginActivity.this, "Spróbuj ponownie", Toast.LENGTH_SHORT).show();
         }
 
 
